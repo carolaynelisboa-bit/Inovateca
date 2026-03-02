@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovateca | Biblioteca Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <img src="logo2.png" alt="Inovateca" class="logo-fixa-canto">
+    <div class="stars-bg"></div>
+
+    <section id="login" class="panel">
+        <div class="auth-card">
+            <img src="logo.png" alt="Inovateca" class="logo-gigante"> 
+            <div class="input-container">
+                <div class="input-group"> 
+                    <label>📧 E-mail</label>
+                    <input type="email" placeholder="digite seu e-mail">
+                </div>
+                <div class="input-group">
+                    <label>🔒 Senha</label>
+                    <input type="password" placeholder="sua senha">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'})">Entrar</button>
+            <p class="switch-auth">Não possui conta? <a href="#cadastro">Criar conta</a></p>
+        </div>
+    </section> 
+
+    <section id="cadastro" class="panel">
+        <div class="auth-card">
+            <img src="logo.png" alt="Inovateca" class="logo-gigante">
+            <h2 style="margin-bottom:20px">Cadastro</h2>
+            <div class="input-container">
+                <input type="text" placeholder="Nome Completo">
+                <input type="email" placeholder="Seu melhor e-mail">
+                <input type="password" placeholder="Crie uma senha">
+                <input type="password" placeholder="Confirme a senha">
+            </div>
+            <button class="btn-primary">Finalizar Cadastro</button>
+            <p class="switch-auth"><a href="#login">Voltar ao Login</a></p>
+        </div>
+    </section>
+
+    <section id="catalogo" class="content-panel-full">
+        <header class="top-header">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar por título, autor ou ISBN...">
+            </div>
+            <div class="header-icons">
+                <span onclick="document.getElementById('meus-livros').scrollIntoView({behavior: 'smooth'})" style="cursor:pointer">👤 Meus Livros</span> | 
+                <span onclick="document.getElementById('ajuda').scrollIntoView({behavior: 'smooth'})" style="cursor:pointer">❓ Ajuda</span>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="filter-badge">Filtros</div>
+                <div class="filter-group">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li onclick="document.getElementById('sci-fi').scrollIntoView({behavior: 'smooth'})" style="cursor:pointer">Ficção científica</li>
+                        <li onclick="document.getElementById('romance').scrollIntoView({behavior: 'smooth'})" style="color:#4facfe; cursor:pointer; font-weight:bold;">Romance</li>
+                        <li>Fantasia</li>
+                        <li>Histórico</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="books-display">
+                <div class="books-grid">
+                    <div class="book-card"><img src="livro1.jpg"><p>Dom Casmurro</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro2.jpg"><p>O Pequeno Príncipe</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro3.jpg"><p>Harry Potter</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro4.jpg"><p>A Culpa é das Estrelas</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro5.jpg"><p>O poder do hábito</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro6.jpg"><p>A menina que roubava livros</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro7.jpg"><p>O meu pé de laranja lima</p><a href="#">Ver Detalhes</a></div>
+                    <div class="book-card"><img src="livro8.jpg"><p>Guerra fria</p><a href="#">Ver Detalhes</a></div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section id="meus-livros" class="content-panel-full section-padding">
+        <div class="container-center">
+            <h2 class="romance-huge-title">Meus Livros</h2>
+            <div class="label-purple">Emprestados</div>
+            <div class="books-grid">
+                <div class="book-card"><img src="livro1.jpg"><p>Dom Casmurro</p><span>Devolução: 15/03</span></div>
+                <div class="book-card"><img src="livro2.jpg"><p>O Pequeno Príncipe</p><span>Devolução: 20/03</span></div>
+                <div class="book-card"><img src="livro20.jpg"><p>Cartas de um diabo</p><span>Devolução: 19/03</span></div>
+                <div class="book-card"><img src="livro17.jpg"><p>Harry potter</p><span>Devolução: 25/03</span></div>
+            </div>
+            
+            <div class="label-purple">Comprados</div>
+            <div class="books-grid">
+                <div class="book-card"><img src="livro5.jpg"><button class="btn-dw">DOWNLOAD</button></div>
+                <div class="book-card"><img src="livro6.jpg"><button class="btn-dw">DOWNLOAD</button></div>
+                <div class="book-card"><img src="livro21.jpg"><button class="btn-dw">DOWNLOAD</button></div>
+                <div class="book-card"><img src="livro19.jpg"><button class="btn-dw">DOWNLOAD</button></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="romance" class="content-panel-full section-padding">
+        <div class="container-center">
+            <h1 class="romance-huge-title">ROMANCE</h1>
+            <div class="books-grid">
+                <div class="book-card"><img src="livro10.jpg"><p>Orgulho e Preconceito</p></div>
+                <div class="book-card"><img src="livro9.jpg"><p>Um Dia</p></div>
+                <div class="book-card"><img src="livro14.jpg"><p>Como Eu Era Antes</p></div>
+                <div class="book-card"><img src="livro13.jpg"><p>P.S. Eu Te Amo</p></div>
+                <div class="book-card"><img src="livro12.jpg"><p>Para Todos os Garotos</p></div>
+                <div class="book-card"><img src="livro11.jpg"><p>É Assim que Acaba</p></div>
+                <div class="book-card"><img src="livro15.jpg"><p>A Hipótese do Amor</p></div>
+                <div class="book-card"><img src="livro4.jpg"><p>A culpa é das estrelas</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sci-fi" class="content-panel-full section-padding">
+        <div class="container-center">
+            <h1 class="romance-huge-title">FICÇÃO CIENTÍFICA</h1>
+            <div class="books-grid">
+                <div class="book-card"><img src="livro21.jpg"><p>Duna</p></div>
+                <div class="book-card"><img src="livro22.jpg"><p>2001: Odisséia</p></div>
+                <div class="book-card"><img src="livro23.jpg"><p>Crônicas Marcianas</p></div>
+                <div class="book-card"><img src="livro24.jpg"><p>Neuromancer</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ajuda" class="content-panel-full section-padding">
+        <div class="container-center">
+            <h2 class="title-section-ajuda">
+                <span class="purple-circle">?</span> Central de Ajuda
+            </h2>
+            <div class="help-main-flex">
+                <div class="help-grid-blue">
+                    <div class="help-card"><img src="balão.png"><p>Perguntas Frequentes</p></div>
+                    <div class="help-card" onclick="document.getElementById('contato-secao').scrollIntoView({behavior: 'smooth'})">
+                        <img src="fone.png"><p>Fale Conosco</p>
+                    </div>
+                    <div class="help-card"><img src="youtube.png"><p>Tutoriais em Vídeo</p></div>
+                    <div class="help-card"><img src="segurança.png"><p>Segurança On-line</p></div>
+                </div>
+                <div class="robot-side-box">
+                    <img src="robo.png" alt="Robô" class="img-robo-ajuda">
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <p>Ainda precisa de ajuda? <strong>Abra um chamado:</strong></p>
+                <div class="ticket-line">
+                    <img src="envelope.png" class="mini-envelope">
+                    <a href="#">Abrir chamado</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato-secao" class="panel">
+        <div class="container-contato">
+            <div class="contact-card">
+                <div class="header-badge">
+                    <i class="fas fa-headset"></i>
+                    <h1>Fale Conosco</h1>
+                </div>
+                <h2>Estamos aqui para <strong>ajudar você!</strong> 💜</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Seu Nome</label>
+                        <input type="text" placeholder="Seu nome">
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="seu.email@exemplo.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Mensagem</label>
+                        <textarea rows="4" placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn-send">Enviar</button>
+                        <button type="button" class="btn-cancel">Cancelar</button>
+                    </div>
+                </form>
+                <p class="footer-text">
+                    Ou entre em contato direto: <a href="mailto:suport@exemplo.com">suport@exemplo.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
