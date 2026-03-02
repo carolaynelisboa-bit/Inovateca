@@ -1,282 +1,106 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: radial-gradient(circle at center, #2b1055 0%, #000 100%); color: white; scroll-behavior: smooth; overflow-x: hidden; }
 
-body { 
-    background: radial-gradient(circle at center, #2b1055 0%, #000 100%);
-    color: white; 
-    scroll-behavior: smooth; 
-    overflow-x: hidden; 
-}
+.stars-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); z-index: -1; }
+.logo-fixa-canto { position: fixed; top: 20px; left: 30px; width: 150px; z-index: 9999; pointer-events: none; }
+.panel { min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+.romance-huge-title { width: 100%; text-align: center; font-size: 60px; font-weight: 700; text-transform: uppercase; color: white; margin: 40px 0; letter-spacing: 2px; }
 
-.stars-bg {
-    position: fixed; 
-    top: 0; left: 0; 
-    width: 100%; height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    z-index: -1;
-}
-
-.logo-fixa-canto {
-    position: fixed; 
-    top: 20px; left: 30px; 
-    width: 150px;
-    z-index: 9999; 
-    pointer-events: none;
-}
-
-.panel { 
-    min-height: 100vh; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-/* CLASSE ADICIONADA: TÍTULO GIGANTE CENTRALIZADO */
-.romance-huge-title {
-    width: 100%;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
-    margin: 40px 0;
-    letter-spacing: 2px;
-}
-
-/* --- LOGIN / CADASTRO --- */
-.auth-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 30px; 
-    padding: 40px; 
-    width: 450px;
-    text-align: center; 
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
+/* --- AUTH (LOGIN/CADASTRO) --- */
+.auth-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-radius: 30px; padding: 40px; width: 450px; text-align: center; border: 1px solid rgba(255,255,255,0.1); }
 .logo-gigante { width: 350px; margin-bottom: 10px; }
+.auth-card input { width: 100%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 15px; color: white; font-size: 18px; margin-top: 15px; }
+.btn-primary { width: 100%; padding: 18px; margin-top: 25px; border-radius: 10px; border: none; font-weight: bold; background: linear-gradient(90deg, #6a11cb, #2575fc); color: white; font-size: 20px; cursor: pointer; }
 
-.auth-card input {
-    width: 100%; 
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 10px; 
-    padding: 15px; 
-    color: white;
-    font-size: 18px; 
-    margin-top: 15px;
-}
-
-.btn-primary {
-    width: 100%; 
-    padding: 18px; 
-    margin-top: 25px;
-    border-radius: 10px; 
-    border: none; 
-    font-weight: bold;
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    color: white; 
-    font-size: 20px; 
-    cursor: pointer;
-}
-
-/* --- CATALOGO (AJUSTADO PELA IMAGEM) --- */
-.top-header {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
-    padding: 15px 40px; 
-    background: rgba(0,0,0,0.6);
-}
-
-.search-box input { 
-    background: white; 
-    color: #333; 
-    border-radius: 20px; 
-    padding: 10px 20px; 
-    width: 400px; 
-    border: none; 
-}
-
+/* --- CATALOGO --- */
+.top-header { display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; background: rgba(0,0,0,0.6); }
+.search-box input { background: white; color: #333; border-radius: 20px; padding: 10px 20px; width: 500px; border: none; margin-left: 650px; }
 .main-layout { display: flex; padding: 40px; gap: 30px; }
 .sidebar { width: 250px; }
 .filter-badge { background: #3a86ff; padding: 10px; border-radius: 20px; text-align: center; font-weight: bold; }
-
-.filter-group h4 { 
-    font-size: 32px; 
-    margin: 20px 0; 
-    color: white; 
-    text-transform: uppercase; 
-    font-weight: 700;
-}
-
-.filter-group li { 
-    list-style: none; 
-    font-size: 18px; 
-    padding: 5px 0; 
-    opacity: 0.8; 
-    transition: 0.3s; 
-}
-
-.books-grid {
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 25px; 
-    flex-grow: 1;
-}
-
-.book-card { 
-    background: rgba(255,255,255,0.05); 
-    padding: 15px; 
-    border-radius: 15px; 
-    text-align: center; 
-    transition: 0.3s;
-}
-
-.book-card:hover {
-    box-shadow: 0 0 15px rgba(177, 148, 255, 0.4);
-    transform: translateY(-5px);
-}
-
-.book-card img { 
-    width: 100%; 
-    border-radius: 8px; 
-    margin-bottom: 10px; 
-}
-
-.btn-dw { 
-    background: #4facfe; 
-    border: none; 
-    padding: 8px 15px; 
-    border-radius: 5px; 
-    color: white; 
-    font-weight: bold; 
-    cursor: pointer; 
-}
+.filter-group h4 { font-size: 32px; margin: 20px 0; color: white; text-transform: uppercase; font-weight: 700; }
+.filter-group li { list-style: none; font-size: 18px; padding: 5px 0; opacity: 0.8; transition: 0.3s; }
+.books-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; flex-grow: 1; }
+.book-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; text-align: center; transition: 0.3s; }
+.book-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+.btn-dw { background: #4facfe; border: none; padding: 8px 15px; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; }
+.label-purple { background-color: #6a11cb; color: white; padding: 5px 15px; border-radius: 4px; display: inline-block; font-weight: bold; font-size: 30px; text-transform: uppercase; margin: 10px 40px; }
 
 /* --- AJUDA --- */
-.title-section-ajuda { font-size: 32px; margin-bottom: 40px; display: flex; align-items: center; }
-.purple-circle { 
-    background: #a64dff; 
-    width: 45px; height: 45px; 
-    border-radius: 50%; 
-    display: flex; justify-content: center; align-items: center; 
-    margin-right: 15px; 
-    font-weight: bold;
-}
-
+.title-section-ajuda { font-size: 32px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center; }
+.purple-circle { background: #a64dff; width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; font-weight: bold; }
 .help-main-flex { display: flex; align-items: center; justify-content: center; gap: 60px; }
 .help-grid-blue { display: grid; grid-template-columns: repeat(2, 220px); gap: 20px; }
-.help-card { 
-    background: #5d78ff; 
-    padding: 30px; 
-    border-radius: 25px; 
-    text-align: center; 
-    cursor: pointer; 
-    transition: 0.3s; 
-}
-
+.help-card { background: #5d78ff; padding: 30px; border-radius: 25px; text-align: center; cursor: pointer; transition: 0.3s; }
 .help-card:hover { transform: scale(1.05); }
 .help-card img { width: 60px; margin-bottom: 10px; }
 .img-robo-ajuda { width: 400px; }
 
-.robot-side-box { display: flex; flex-direction: column; align-items: center; }
-.chat-bubble-tail {
-    background: white; color: black; padding: 12px 25px;
-    border-radius: 15px; font-weight: bold; margin-bottom: 20px;
-    position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.chat-bubble-tail::after {
-    content: ''; position: absolute; bottom: -10px; right: 50%;
-    transform: translateX(50%); border-left: 10px solid transparent;
-    border-right: 10px solid transparent; border-top: 10px solid white;
-}
-
-/* RODAPÉ CHAMADO */
-.ticket-footer { text-align: center; margin-top: 50px; font-size: 18px; }
-
-.ticket-line { 
+/* TICKET FOOTER CENTRALIZADO */
+.ticket-footer { 
+    text-align: center; 
+    margin-top: 50px; 
+    font-size: 18px; 
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 12px; 
-    margin-top: 10px; 
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    gap: 15px;
 }
-
-.mini-envelope { width: 35px; height: auto; }
-
-.ticket-line a { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
-    border-bottom: 1px solid white; 
-    transition: 0.3s; 
+.ticket-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
+.mini-envelope { width: 35px; }
+.ticket-line a { color: white; text-decoration: none; font-weight: bold; border-bottom: 1px solid white; transition: 0.3s; }
 
-.ticket-line a:hover { color: #4facfe; border-bottom-color: #4facfe; }
-
-/* --- FALE CONOSCO (PREMIUM) --- */
+/* --- CARDS PREMIUM (FAQ, TUTORIAIS, SEGURANÇA E CONTATO) --- */
 .container-contato { width: 100%; display: flex; justify-content: center; padding: 60px 20px; }
-
-.contact-card {
-    background: rgba(40, 60, 180, 0.15); 
-    backdrop-filter: blur(12px);
-    padding: 60px 45px 40px; 
-    border-radius: 30px;
-    width: 100%; 
-    max-width: 550px; 
-    position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-}
-
-.contact-card .header-badge {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    display: flex; align-items: center; padding: 12px 30px;
-    border-radius: 50px; position: absolute; top: -25px; left: 50%;
-    transform: translateX(-50%); white-space: nowrap;
-}
-
+.contact-card { background: rgba(40, 60, 180, 0.15); backdrop-filter: blur(12px); padding: 60px 45px 40px; border-radius: 30px; width: 100%; max-width: 550px; position: relative; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4); text-align: center; }
+.contact-card .header-badge { background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); display: flex; align-items: center; padding: 12px 30px; border-radius: 50px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 14px;}
+.contact-card h1 { font-size: 1.5rem; }
+.contact-card h2 { margin-bottom: 20px; }
 .contact-card label { display: block; margin-bottom: 5px; color: #4facfe; font-size: 0.9rem; font-weight: bold; text-align: left; }
-
-.contact-card input, .contact-card textarea {
-    width: 100% !important; 
-    padding: 14px 18px !important; 
-    border-radius: 12px !important;
-    background: rgba(0, 0, 0, 0.3) !important; 
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: white !important; 
-    margin-bottom: 15px !important; 
-    outline: none !important;
-}
-
-.contact-card input:focus, .contact-card textarea:focus {
-    border-color: #6a11cb !important; 
-    box-shadow: 0 0 10px rgba(106, 17, 203, 0.5) !important;
-}
-
-.button-container { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
-
+.contact-card input, .contact-card textarea { width: 100%; padding: 14px 18px; border-radius: 12px; background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.2); color: white; margin-bottom: 15px; outline: none; }
 .btn-send { background: linear-gradient(90deg, #2575fc, #6a11cb); color: white; padding: 12px 40px; border-radius: 30px; border:none; font-weight:bold; cursor:pointer; }
 .btn-cancel { background: rgba(255,255,255,0.1); color: white; padding: 12px 40px; border-radius: 30px; border:none; cursor:pointer; }
-
 .footer-text { text-align: center; margin-top: 35px; font-size: 0.85rem; color: rgba(255, 255, 255, 0.5); }
-.footer-text a { color: #4facfe; font-weight: bold; text-decoration: none; }
+.button-container { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
 
-.label-purple {
-    background-color: #6a11cb; /* Roxo vibrante combinando com seu tema */
-    color: white;               /* Cor do texto */
-    padding: 5px 15px;          /* Espaçamento interno para formar o quadrado/retângulo */
-    border-radius: 4px;         /* Curvatura leve nos cantos (opcional) */
-    display: inline-block;      /* Faz o fundo envolver apenas o texto */
-    font-weight: bold;          /* Deixa o texto em negrito para destacar */
-    font-size: 30px;            /* Tamanho da fonte */
-    text-transform: uppercase;  /* Letras maiúsculas para estilo de etiqueta */
-    margin: 10px;
-    margin-left: 40px;
+/* ESTILO DAS LISTAS EM LINHA */
+.security-list { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+.security-row { background: rgba(0, 0, 0, 0.3); padding: 15px 20px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; gap: 15px; text-align: left; }
+.security-row i { color: #4facfe; font-size: 1.1rem; }
+.security-row p { margin: 0; font-size: 1rem; color: white; flex-grow: 1; }
+
+/* HOVER E ÍCONES DAS LISTAS */
+.tutorial-row { cursor: pointer; transition: 0.3s; }
+.tutorial-row:hover { background: rgba(106, 17, 203, 0.3); transform: scale(1.02); border-color: #6a11cb; }
+.play-icon { color: white !important; transition: 0.3s; }
+.tutorial-row:hover .play-icon { color: #4facfe !important; }
+
+/* AJUSTES ESPECÍFICOS PARA O FORMULÁRIO DE CHAMADO */
+#abrir-chamado .contact-card {
+    background: rgba(40, 60, 180, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#abrir-chamado textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    resize: none;
+    outline: none;
+}
+
+#abrir-chamado input:focus, #abrir-chamado textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.3);
 }

@@ -18,11 +18,11 @@
             <img src="logo.png" alt="Inovateca" class="logo-gigante"> 
             <div class="input-container">
                 <div class="input-group"> 
-                    <label>📧 E-mail</label>
+                    
                     <input type="email" placeholder="digite seu e-mail">
                 </div>
                 <div class="input-group">
-                    <label>🔒 Senha</label>
+                
                     <input type="password" placeholder="sua senha">
                 </div>
             </div>
@@ -38,6 +38,8 @@
             <div class="input-container">
                 <input type="text" placeholder="Nome Completo">
                 <input type="email" placeholder="Seu melhor e-mail">
+                <input type="password" placeholder="CPF">
+                <input type="password" placeholder="Telefone">
                 <input type="password" placeholder="Crie uma senha">
                 <input type="password" placeholder="Confirme a senha">
             </div>
@@ -67,6 +69,13 @@
                         <li onclick="document.getElementById('romance').scrollIntoView({behavior: 'smooth'})" style="color:#4facfe; cursor:pointer; font-weight:bold;">Romance</li>
                         <li>Fantasia</li>
                         <li>Histórico</li>
+                        <li>Terror</li>
+                        <li>Suspense e mistério</li>
+                        <li>Aventura</li>
+                        <li>Poesia</li>
+                        <li>Escolar</li>
+                        <li>Universitária</li>
+                        <li>Religioso</li>
                     </ul>
                 </div>
             </aside>
@@ -131,10 +140,28 @@
                 <div class="book-card"><img src="livro22.jpg"><p>2001: Odisséia</p></div>
                 <div class="book-card"><img src="livro23.jpg"><p>Crônicas Marcianas</p></div>
                 <div class="book-card"><img src="livro24.jpg"><p>Neuromancer</p></div>
+                <div class="book-card"><img src="livro32.png"><p>Fundação</p></div>
+                <div class="book-card"><img src="livro33.jpg"><p>A Mão Esquerda da Escuridão</p></div>
+                <div class="book-card"><img src="livro34.jpg"><p>Fahrenheit 451</p></div>
+                <div class="book-card"><img src="livro35.webp"><p>O Guia do Mochileiro das Galáxias</p></div>
             </div>
         </div>
     </section>
-
+<section id="fantasy" class="content-panel-full section-padding">
+        <div class="container-center">
+            <h1 class="romance-huge-title">FANTASIA</h1>
+            <div class="books-grid">
+                <div class="book-card"><img src="livro10.jpg"><p>Orgulho e Preconceito</p></div>
+                <div class="book-card"><img src="livro9.jpg"><p>Um Dia</p></div>
+                <div class="book-card"><img src="livro14.jpg"><p>Como Eu Era Antes</p></div>
+                <div class="book-card"><img src="livro13.jpg"><p>P.S. Eu Te Amo</p></div>
+                <div class="book-card"><img src="livro12.jpg"><p>Para Todos os Garotos</p></div>
+                <div class="book-card"><img src="livro11.jpg"><p>É Assim que Acaba</p></div>
+                <div class="book-card"><img src="livro15.jpg"><p>A Hipótese do Amor</p></div>
+                <div class="book-card"><img src="livro4.jpg"><p>A culpa é das estrelas</p></div>
+            </div>
+        </div>
+    </section>
     <section id="ajuda" class="content-panel-full section-padding">
         <div class="container-center">
             <h2 class="title-section-ajuda">
@@ -142,12 +169,18 @@
             </h2>
             <div class="help-main-flex">
                 <div class="help-grid-blue">
-                    <div class="help-card"><img src="balão.png"><p>Perguntas Frequentes</p></div>
+                    <div class="help-card" onclick="document.getElementById('faq-secao').scrollIntoView({behavior: 'smooth'})">
+                        <img src="balão.png"><p>Perguntas Frequentes</p>
+                    </div>
                     <div class="help-card" onclick="document.getElementById('contato-secao').scrollIntoView({behavior: 'smooth'})">
                         <img src="fone.png"><p>Fale Conosco</p>
                     </div>
-                    <div class="help-card"><img src="youtube.png"><p>Tutoriais em Vídeo</p></div>
-                    <div class="help-card"><img src="segurança.png"><p>Segurança On-line</p></div>
+                    <div class="help-card" onclick="document.getElementById('tutoriais-secao').scrollIntoView({behavior: 'smooth'})">
+                        <img src="youtube.png"><p>Tutoriais em Vídeo</p>
+                    </div>
+                    <div class="help-card" onclick="document.getElementById('seguranca-online').scrollIntoView({behavior: 'smooth'})">
+                        <img src="segurança.png"><p>Segurança On-line</p>
+                    </div>
                 </div>
                 <div class="robot-side-box">
                     <img src="robo.png" alt="Robô" class="img-robo-ajuda">
@@ -158,6 +191,145 @@
                 <div class="ticket-line">
                     <img src="envelope.png" class="mini-envelope">
                     <a href="#">Abrir chamado</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-secao" class="panel">
+        <div class="container-contato">
+            <div class="contact-card">
+                <div class="header-badge">
+                    <h1>Perguntas Frequentes</h1>
+                </div>
+                <div class="security-list">
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-question-circle" style="color: #a64dff;"></i>
+                        <p>Como acessar e cadastrar?</p>
+                        <i class="fas fa-chevron-right play-icon" style="font-size: 1rem;"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-question-circle" style="color: #a64dff;"></i>
+                        <p>Como faço para recuperar minha senha?</p>
+                        <i class="fas fa-chevron-right play-icon" style="font-size: 1rem;"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-question-circle" style="color: #a64dff;"></i>
+                        <p>O que significa acesso limitado?</p>
+                        <i class="fas fa-chevron-right play-icon" style="font-size: 1rem;"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-question-circle" style="color: #a64dff;"></i>
+                        <p>Onde posso encontrar materiais específicos?</p>
+                        <i class="fas fa-chevron-right play-icon" style="font-size: 1rem;"></i>
+                    </div>
+                </div>
+                <p class="footer-text" style="color:white">Ainda com dúvidas?</p>
+                <div class="button-container">
+                    <button class="btn-send" onclick="document.getElementById('contato-secao').scrollIntoView({behavior: 'smooth'})">Fale Conosco</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="abrir-chamado" class="panel">
+        <div class="container-contato">
+            <div class="contact-card">
+                <div class="header-badge">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h1>Abrir Chamado</h1>
+                </div>
+                <h2 style="margin-bottom: 20px;">Suporte <strong>Técnico</strong> 🛠️</h2>
+                <form>
+                    <div class="input-group" style="text-align: left;">
+                        <label style="color: #4facfe; font-weight: bold;">Assunto do Problema</label>
+                        <input type="text" placeholder="Ex: Erro ao baixar livro ou login">
+                    </div>
+                    
+                    <div class="input-group" style="text-align: left; margin-top: 15px;">
+                        <label style="color: #4facfe; font-weight: bold;">Descrição Detalhada</label>
+                        <textarea rows="5" placeholder="Descreva aqui o que está acontecendo..."></textarea>
+                    </div>
+
+                    <div class="button-container" style="display: flex; gap: 15px; justify-content: center; margin-top: 25px;">
+                        <button type="submit" class="btn-send">Enviar Chamado</button>
+                        <button type="button" class="btn-cancel" onclick="document.getElementById('ajuda').scrollIntoView({behavior: 'smooth'})">Cancelar</button>
+                    </div>
+                </form>
+                <p class="footer-text" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+                    Nosso tempo médio de resposta é de 24h úteis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutoriais-secao" class="panel">
+        <div class="container-contato">
+            <div class="contact-card">
+                <div class="header-badge">
+                    <i class="fas fa-play-circle"></i>
+                    <h1>Tutoriais em Vídeo</h1>
+                </div>
+                <h2>Aprenda a usar a <strong>Inovateca!</strong> 🎥</h2>
+                <div class="security-list">
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-star" style="color: #ffd700;"></i>
+                        <p>1. Como acessa a Biblioteca virtual</p>
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-star" style="color: #ffd700;"></i>
+                        <p>2. Funções Avançadas de Pesquisa</p>
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-star" style="color: #ffd700;"></i>
+                        <p>3. Dicas para Aproveitar ao Máximo</p>
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                    <div class="security-row tutorial-row">
+                        <i class="fas fa-star" style="color: #ffd700;"></i>
+                        <p>4. Gerenciando Sua Biblioteca</p>
+                        <i class="fas fa-play-circle play-icon"></i>
+                    </div>
+                </div>
+                <p class="footer-text" style="color:white">Tem alguma dúvida específica?</p>
+                <div class="button-container">
+                    <button class="btn-send" onclick="document.getElementById('contato-secao').scrollIntoView({behavior: 'smooth'})">Fale Conosco</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="seguranca-online" class="panel">
+        <div class="container-contato">
+            <div class="contact-card">
+                <div class="header-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <h1>Segurança Online</h1>
+                </div>
+                <h2>Proteja seus <strong>dados!</strong> 🛡️</h2>
+                <div class="security-list">
+                    <div class="security-row">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Use senhas fortes e únicas</p>
+                    </div>
+                    <div class="security-row">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Ative a autenticação em duas etapas</p>
+                    </div>
+                    <div class="security-row">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Tenha cuidado com e-mails suspeitos</p>
+                    </div>
+                    <div class="security-row">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Mantenha seu dispositivo atualizado</p>
+                    </div>
+                </div>
+                <p class="footer-text" style="color:white">Suspeita de alguma atividade incomum?</p>
+                <div class="button-container">
+                    <button class="btn-send" onclick="document.getElementById('contato-secao').scrollIntoView({behavior: 'smooth'})">Fale Conosco</button>
                 </div>
             </div>
         </div>
