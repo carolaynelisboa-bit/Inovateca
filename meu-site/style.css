@@ -22,8 +22,39 @@ body { background: radial-gradient(circle at center, #2b1055 0%, #000 100%); col
 .filter-group h4 { font-size: 32px; margin: 20px 0; color: white; text-transform: uppercase; font-weight: 700; }
 .filter-group li { list-style: none; font-size: 18px; padding: 5px 0; opacity: 0.8; transition: 0.3s; }
 .books-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; flex-grow: 1; }
-.book-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; text-align: center; transition: 0.3s; }
-.book-card img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+/* --- ESTILO DOS LIVROS COM ANIMAÇÃO --- */
+.book-card { 
+    background: rgba(255,255,255,0.05); 
+    padding: 15px; 
+    border-radius: 15px; 
+    text-align: center; 
+    /* A mágica acontece aqui: */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    cursor: pointer;
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 1;
+}
+
+/* Quando passa o mouse no card do livro */
+.book-card:hover {
+    transform: scale(1.1) translateY(-15px); /* Aumenta e sobe */
+    z-index: 99; /* Joga o livro para a frente de todos os outros */
+    background: rgba(255, 255, 255, 0.15); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); /* Sombra de profundidade */
+}
+
+.book-card img { 
+    width: 100%; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+    transition: 0.3s; 
+}
+
+/* Brilho extra na capa do livro ao passar o mouse */
+.book-card:hover img {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4);
+}
 .btn-dw { background: #4facfe; border: none; padding: 8px 15px; border-radius: 5px; color: white; font-weight: bold; cursor: pointer; }
 .label-purple { background-color: #6a11cb; color: white; padding: 5px 15px; border-radius: 4px; display: inline-block; font-weight: bold; font-size: 30px; text-transform: uppercase; margin: 10px 40px; }
 
@@ -40,7 +71,7 @@ body { background: radial-gradient(circle at center, #2b1055 0%, #000 100%); col
 /* TICKET FOOTER CENTRALIZADO */
 .ticket-footer { 
     text-align: center; 
-    margin-top: 50px; 
+    margin-top: 50px;  
     font-size: 18px; 
     display: flex; 
     flex-direction: column; 
