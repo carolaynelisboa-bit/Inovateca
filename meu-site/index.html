@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    
     <img src="logo2.png" alt="Inovateca" class="logo-fixa-canto">
     <div class="stars-bg"></div>
 
@@ -57,8 +58,12 @@
                 <span onclick="document.getElementById('meus-livros').scrollIntoView({behavior: 'smooth'})" style="cursor:pointer">👤 Meus Livros</span> | 
                 <span onclick="document.getElementById('ajuda').scrollIntoView({behavior: 'smooth'})" style="cursor:pointer">❓ Ajuda</span>
             </div>
-        </header>
+        </header> 
 
+         <img src="logo2.png" alt="Inovateca" class="logo-fixa-canto" 
+           onclick="const el = document.getElementById('catalogo'); if(el) el.scrollIntoView({behavior: 'smooth'})" 
+
+     style="cursor:pointer">
         <div class="main-layout">
             <aside class="sidebar">
                 <div class="filter-badge">Filtros</div>
