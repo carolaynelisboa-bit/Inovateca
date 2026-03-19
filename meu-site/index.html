@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">sc
-    <meta name="viewport" content="width=device-width, initial-ale=1.0">
-    <title>Inovateca | Biblioteca Virtual</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Inovateca</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <section id="login" class="panel">
+        <div class="auth-card">
+            <img src="icones/logo.png" alt="Inovateca" class="logo-gigante"> 
+            
+            <div class="input-container">
+                <div class="input-group"> 
+                    <input type="email" id="email-input" placeholder="digite seu e-mail">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="senha-input" placeholder="sua senha">
+                </div>
+            </div>
 
+           <button class="btn-primary" onclick="alert('Bem-vindo à Inovateca!'); window.location.href='Catálogo.html'">Entrar</button>
+
+            <div class="switch-auth">
+                <p>Não possui conta?</p>
+                <button class="btn-secondary" onclick="window.location.href='Cadastro.html'">Criar conta</button>
+            </div>
+        </div>
+    </section>  
     
-    <img src="icones/logo2.png" alt="Inovateca" class="logo-fixa-canto">
-    <div class="stars-bg"></div>
-
+    <script src="script.js"></script>
 </body>
 </html>
